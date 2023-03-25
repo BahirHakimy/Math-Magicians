@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Display from './Display';
 
-function Calculator(props) {
+function Calculator() {
   const buttons = [
     'AC',
     '+/-',

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 function Button({
@@ -8,11 +9,12 @@ function Button({
 }) {
   return (
     <button
+      type="button"
       onClick={() => onClick(text)}
       style={{
         width: '100%',
         height: '100%',
-        background: background,
+        background,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
