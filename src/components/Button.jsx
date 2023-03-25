@@ -1,11 +1,8 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Button({
-  text = 'H',
-  background = 'whitesmoke',
-  onClick = () => {},
-  styles = {},
+  text, background = 'whitesmoke', onClick, styles = {},
 }) {
   return (
     <button
@@ -28,5 +25,19 @@ function Button({
     </button>
   );
 }
+
+Button.propTypes = {
+  text: PropTypes.string,
+  background: PropTypes.string,
+  onClick: PropTypes.func,
+  styles: PropTypes.objectOf(PropTypes.object()),
+};
+
+Button.defaultProps = {
+  text: 'B',
+  styles: {},
+  onClick: () => {},
+  background: 'whitesmoke',
+};
 
 export default Button;
