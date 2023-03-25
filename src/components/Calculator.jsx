@@ -36,7 +36,7 @@ function Calculator() {
   return (
     <div
       style={{
-        height: '100vh',
+        height: '100%',
         width: '100%',
         display: 'grid',
         gridTemplateRows: 'repeat(6,1fr)',
