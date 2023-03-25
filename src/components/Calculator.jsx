@@ -1,17 +1,24 @@
 import React from 'react';
 import Button from './Button';
 import Display from './Display';
+import calculate from '../logic/calculate';
 
 function Calculator() {
+  const [result, setResult] = React.useState({
+    total: 0,
+    next: null,
+    operation: null,
+  });
+
   const buttons = [
     'AC',
     '+/-',
     '%',
-    '/',
+    '÷',
     '7',
     '8',
     '9',
-    'X',
+    'x',
     '4',
     '5',
     '6',
@@ -24,7 +31,8 @@ function Calculator() {
     '.',
     '=',
   ];
-  const opreators = ['/', 'X', '-', '+', '='];
+  const opreators = ['÷', 'x', '-', '+', '='];
+  const { next, total, operation } = result;
   return (
     <div
       style={{
@@ -38,7 +46,10 @@ function Calculator() {
         background: '#ccc',
       }}
     >
-      <Display styles={{ gridColumn: '1/5' }} />
+      <Display
+        styles={{ gridColumn: '1/5' }}
+        text={`${total || ''} ${operation || ''} ${next || ''}`}
+      />
       {buttons.map((text) => (
         <Button
           key={text}
@@ -47,6 +58,7 @@ function Calculator() {
             gridColumn: text === '0' ? 'span 2' : 'span 1',
             background: opreators.includes(text) ? '#f5913e' : 'whitesmoke',
           }}
+          onClick={() => setResult(calculate(result, text))}
         />
       ))}
     </div>
