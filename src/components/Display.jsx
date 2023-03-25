@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
-function Display({ text = '0', styles = {} }) {
+function Display({ text = '0', styles }) {
   return (
     <div
       style={{
@@ -19,5 +19,15 @@ function Display({ text = '0', styles = {} }) {
     </div>
   );
 }
+
+Display.propTypes = {
+  text: PropTypes.string,
+  styles: PropTypes.objectOf(PropTypes.object()),
+};
+
+Display.defaultProps = {
+  text: '0',
+  styles: {},
+};
 
 export default Display;
