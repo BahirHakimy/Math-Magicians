@@ -67,7 +67,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Demo](https://bahirhakimy.github.io/Math-Magicians/)
+- Comming Soon
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
