@@ -48,7 +48,7 @@ function Calculator() {
             text={text}
             stylesOverride={{
               gridColumn: text === '0' ? 'span 2' : 'span 1',
-              background: opreators.includes(text) ? '#f5913e44' : '#fff4',
+              background: opreators.includes(text) ? '#023076b3' : '#2226',
               borderBottomLeftRadius: '1rem',
             }}
             onClick={() => setResult(calculate(result, text))}
