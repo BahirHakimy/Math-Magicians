@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 2rem 4rem;
+  gap: 4rem;
+  backdrop-filter: blur(5px);
+  animation: appear 1s ease-in 1 forwards;
+}
+
+.title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 2rem;
+  filter: drop-shadow(0.2rem 0.2rem 0.3rem #888);
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  padding-top: 4rem;
+}
+
+.description {
+  color: #00a1ff;
+  font-weight: 500;
+  filter: drop-shadow(0.2rem 0.2rem 0.3rem #000);
+  text-shadow: 0.1rem 0.1rem 0.5rem #333;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    gap: 2rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .title {
+    padding-top: 2rem;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

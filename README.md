@@ -107,7 +107,7 @@ To start the development server run
 npm start
 ```
 
-- this command will start the development server on `localhost:8080` address
+- this command will start the development server on `localhost:3000` address
 
 To create and optimized production build run
 
@@ -115,7 +115,7 @@ To create and optimized production build run
 npm run build
 ```
 
-- this command will create a bunduled chunks of code inside `dist/` folder
+- this command will create a bunduled chunks of code inside `build/` folder
 
 <p align="right"><a href="#readme-top">👆</a></p>
 

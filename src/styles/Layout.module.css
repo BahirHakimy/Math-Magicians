@@ -1,0 +1,40 @@
+.app {
+  overflow: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.title {
+  color: white;
+  filter: drop-shadow(0.2rem 0.2rem 0.3rem #77c);
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  list-style-type: none;
+}
+
+.navButton {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+  font-family: Azonix, sans-serif;
+  border: 1px solid #ccc6;
+  box-shadow: 0.1rem 0.1rem 0.2rem #19366b;
+  backdrop-filter: blur(5px);
+  margin: 0 0.5rem;
+  background-color: transparent;
+  border-radius: 0.2rem;
+}
