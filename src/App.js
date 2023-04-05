@@ -1,72 +1,30 @@
 import React from 'react';
 import './App.css';
-import Calculator from './components/Calculator';
+import Layout from 'components/Layout';
+import Home from 'components/Home';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from 'react-router-dom';
 import Quote from './components/Quote';
+import Calculator from './components/Calculator';
 
 function App() {
-  const [app, setApp] = React.useState('calculator');
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        { path: '/', element: <Home /> },
+        { path: 'calculator', element: <Calculator /> },
+        { path: 'quote', element: <Quote /> },
+        { path: '*', element: <Navigate to="/" /> },
+      ],
+    },
+  ]);
 
-  return (
-    <div className="App">
-      <ul
-        aria-label="navbar"
-        style={{
-          width: '100%',
-          position: 'sticky',
-          top: '0',
-          height: '10vh',
-          backgroundColor: 'cyan',
-          listStyleType: 'none',
-          display: 'flex',
-          justifyContent: 'flex-end',
-          alignItems: 'center',
-          padding: '.5rem 1rem',
-        }}
-      >
-        <li>
-          <button
-            type="button"
-            style={{
-              padding: '.25rem .5rem',
-              cursor: 'pointer',
-              color: '#fff',
-              fontWeight: '400',
-              boxShadow: '.1rem .1rem .2rem black',
-              margin: '0 .5rem',
-              borderRadius: '.5rem',
-              background: 'royalblue',
-              border: 'none',
-            }}
-            onClick={() => setApp('calculator')}
-          >
-            Calculator
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            style={{
-              padding: '.25rem .5rem',
-              cursor: 'pointer',
-              color: '#fff',
-              fontWeight: '400',
-              boxShadow: '.1rem .1rem .2rem black',
-              margin: '0 .5rem',
-              borderRadius: '.5rem',
-              background: 'royalblue',
-              border: 'none',
-            }}
-            onClick={() => setApp('quote')}
-          >
-            Quote
-          </button>
-        </li>
-      </ul>
-      <div style={{ height: '90vh' }}>
-        {app === 'calculator' ? <Calculator /> : <Quote />}
-      </div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
