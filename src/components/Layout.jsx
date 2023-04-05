@@ -7,19 +7,27 @@ function Layout() {
     <div className={styles.app}>
       <header className={styles.header}>
         <h1 className={styles.title}>Math Magicians</h1>
-        <ul aria-label="navbar" className={styles.navbar}>
+        <ul aria-label="navbar" data-testid="navbar" className={styles.navbar}>
           <li>
-            <Link to="/" className={styles.navButton}>
+            <Link to="/" data-testid="home-link" className={styles.navButton}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="calculator" className={styles.navButton}>
+            <Link
+              to="calculator"
+              data-testid="calculator-link"
+              className={styles.navButton}
+            >
               Calculator
             </Link>
           </li>
           <li>
-            <Link to="quote" className={styles.navButton}>
+            <Link
+              to="quote"
+              data-testid="quote-link"
+              className={styles.navButton}
+            >
               Quote
             </Link>
           </li>
