@@ -67,7 +67,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Coming Soon...
+- [Demo](https://math-magicians-xfht.onrender.com/)
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
