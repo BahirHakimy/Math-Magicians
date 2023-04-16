@@ -60,6 +60,7 @@
 
 - **Clean Design**
 - **Responsive**
+- **Stunning UI**
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
@@ -141,7 +142,6 @@ npm run build
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Cool Design On The Way** :eyes:
 <p align="right"><a href="#readme-top">👆</a></p>
 
 <!-- Contributing -->
