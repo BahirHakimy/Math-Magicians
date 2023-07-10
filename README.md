@@ -24,7 +24,7 @@
 
 # 📖 Math Magicians <a name="about-project"></a>
 
-**Math Magicians** A simple app built with `React JS` which has a beautiful calculator as well as a page for showing random quote.
+**Math Magicians** A simple app built with `React JS` which has a beautiful calculator as well as a page for showing random quote to inspire you.
 
 ## 🛠 Built With <a name="built-with"></a>
 
